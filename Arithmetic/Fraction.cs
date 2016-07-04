@@ -13,7 +13,7 @@ namespace Arithmetic
 
         public Fraction plus(Fraction that)
         {
-            return that;
+            return this;
         }
 
         public int toIntegerValue()

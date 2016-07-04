@@ -14,7 +14,7 @@ namespace Arithmetic.Tests
         [TestMethod()]
         public void nonZeroPlusZero()
         {
-            Fraction sum = new Fraction(0).plus(new Fraction(3));
+            Fraction sum = new Fraction(3).plus(new Fraction(0));
             Assert.AreEqual(3, sum.toIntegerValue());
         }
     }
