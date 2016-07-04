@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Arithmetic
+﻿namespace Arithmetic
 {
     public class Fraction
     {
@@ -13,15 +11,7 @@ namespace Arithmetic
 
         public Fraction plus(Fraction that)
         {
-            if (that.toIntegerValue() != 0)
-            {
-                return that;
-            }
-            else
-            {
-                return this;
-            }
-            
+            return new Fraction(this.integerValue + that.integerValue);
         }
 
         public int toIntegerValue()
