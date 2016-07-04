@@ -4,23 +4,21 @@ namespace Arithmetic
 {
     public class Fraction
     {
-        public Fraction()
-        {
-            
-        }
+        private int integerValue;
 
         public Fraction(int integerValue)
         {
+            this.integerValue = integerValue;
         }
 
-        public Fraction plus(Fraction fraction)
+        public Fraction plus(Fraction that)
         {
-            return this;
+            return that;
         }
 
         public int toIntegerValue()
         {
-            return 0;
+            return integerValue;
         }
     }
 }
