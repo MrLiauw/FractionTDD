@@ -31,5 +31,12 @@ namespace Arithmetic.Tests
             Fraction sum = new Fraction(3).plus(new Fraction(4));
             Assert.AreEqual(7, sum.toIntegerValue());
         }
+
+        [TestMethod()]
+        public void negativeInputAndNegativeOutput()
+        {
+            Fraction sum = new Fraction(-3).plus(new Fraction(1));
+            Assert.AreEqual(-2, sum.toIntegerValue());
+        }
     }
 }
