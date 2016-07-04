@@ -13,7 +13,15 @@ namespace Arithmetic
 
         public Fraction plus(Fraction that)
         {
-            return this;
+            if (that.toIntegerValue() != 0)
+            {
+                return that;
+            }
+            else
+            {
+                return this;
+            }
+            
         }
 
         public int toIntegerValue()
