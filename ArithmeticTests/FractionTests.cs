@@ -5,9 +5,10 @@ namespace Arithmetic.Tests
     public class FractionTests
     {
         [TestMethod()]
-        public void AddFractionTest()
+        public void ZeroPlusZero()
         {
-            Assert.IsTrue(true);
+            Fraction sum = new Fraction(0).plus(new Fraction(0));
+            Assert.AreEqual(0, sum.toIntegerValue());
         }
     }
 }

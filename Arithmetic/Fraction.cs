@@ -1,4 +1,6 @@
-﻿namespace Arithmetic
+﻿using System;
+
+namespace Arithmetic
 {
     public class Fraction
     {
@@ -7,9 +9,18 @@
             
         }
 
-        public Fraction AddFraction(Fraction adder)
+        public Fraction(int integerValue)
         {
-            return new Fraction();
+        }
+
+        public Fraction plus(Fraction fraction)
+        {
+            return this;
+        }
+
+        public int toIntegerValue()
+        {
+            return 0;
         }
     }
 }
