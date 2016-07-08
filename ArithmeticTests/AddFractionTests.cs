@@ -79,7 +79,6 @@ namespace Arithmetic.Tests
         }
 
         [TestMethod()]
-        [Ignore]
         public void negativeEverywhere()
         {
             Assert.AreEqual(new Fraction(1,2), new Fraction(1,-4).plus(new Fraction(-3,-4)));
