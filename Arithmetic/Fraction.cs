@@ -31,5 +31,10 @@
             }
             return false;
         }
+
+        public override int GetHashCode()
+        {
+            return _numerator*19 + _denominator;
+        }
     }
 }
