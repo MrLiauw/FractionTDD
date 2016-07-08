@@ -2,26 +2,29 @@
 {
     public class Fraction
     {
-        private int integerValue;
+        private readonly int _denominator;
+        private readonly int _integerValue;
 
         public Fraction(int integerValue)
         {
-            this.integerValue = integerValue;
+            _integerValue = integerValue;
+            _denominator = 1;
         }
 
         public Fraction(int numerator, int denominator)
         {
-            
+            _integerValue = numerator;
+            _denominator = denominator;
         }
 
         public Fraction plus(Fraction that)
         {
-            return new Fraction(this.integerValue + that.integerValue);
+            return new Fraction(_integerValue + that._integerValue, _denominator);
         }
 
         public int toIntegerValue()
         {
-            return integerValue;
+            return _integerValue;
         }
 
         public int getNumerator {
@@ -29,7 +32,7 @@
         }
 
         public int getDenominator {
-            get { return 5; }
+            get { return _denominator; }
         }
     }
 }
