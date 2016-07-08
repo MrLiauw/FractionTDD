@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Arithmetic.Tests
 {
     [TestClass()]
@@ -32,6 +33,14 @@ namespace Arithmetic.Tests
         public void negativeInputAndNegativeOutput()
         {
             Assert.AreEqual(-2, new Fraction(-3).plus(new Fraction(1)).toIntegerValue());
+        }
+
+        [TestMethod()]
+        public void nonTrivialDenominator()
+        {
+            Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
+            Assert.AreEqual(3, sum.getNumerator);
+            Assert.AreEqual(5, sum.getDenominator);
         }
     }
 }
