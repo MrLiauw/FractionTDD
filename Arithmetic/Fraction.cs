@@ -7,7 +7,8 @@
 
         public Fraction(int numerator, int denominator = 1)
         {
-            int gcd = NumberTheory.gcd(numerator, denominator);
+            int signOfDenominator = denominator < 0 ? -1 : 1;
+            int gcd = NumberTheory.gcd(numerator, denominator) * signOfDenominator;
             _numerator = numerator / gcd;
             _denominator = denominator / gcd;
         }

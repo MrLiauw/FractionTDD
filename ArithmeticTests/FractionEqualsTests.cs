@@ -35,5 +35,12 @@ namespace ArithmeticTests
         {
             Assert.AreNotEqual(new Fraction(3), new Fraction(6));
         }
+
+        [TestMethod]
+        public void negativeDenominator()
+        {
+            Assert.AreEqual(new Fraction(1, 2), new Fraction(-1, -2));
+            Assert.AreEqual(new Fraction(1, -2), new Fraction(-1, 2));
+        }
     }
 }
