@@ -5,13 +5,7 @@
         private readonly int _denominator;
         private readonly int _numerator;
 
-        public Fraction(int integerValue)
-        {
-            _numerator = integerValue;
-            _denominator = 1;
-        }
-
-        public Fraction(int numerator, int denominator)
+        public Fraction(int numerator, int denominator = 1)
         {
             _numerator = numerator;
             _denominator = denominator;
