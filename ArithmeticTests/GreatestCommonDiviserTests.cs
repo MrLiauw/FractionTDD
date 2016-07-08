@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ArithmeticTests
 {
@@ -10,7 +11,7 @@ namespace ArithmeticTests
         {
             Assert.AreEqual(1, gcd(1,1));
             Assert.AreEqual(2, gcd(2, 2));
-            Assert.AreEqual(-1, gcd(-1, -1));
+            Assert.AreEqual(1, gcd(-1, -1));
         }
 
         [TestMethod]
@@ -18,7 +19,7 @@ namespace ArithmeticTests
         {
             Assert.AreEqual(1, gcd(2, 3));
             Assert.AreEqual(1, gcd(4, 7));
-            Assert.AreEqual(-1, gcd(-2, -3));
+            Assert.AreEqual(1, gcd(-2, -3));
         }
 
         [TestMethod]
@@ -33,14 +34,14 @@ namespace ArithmeticTests
         {
             Assert.AreEqual(2, gcd(6, 8));
             Assert.AreEqual(7, gcd(49, 315));
-            Assert.AreEqual(-4, gcd(-24, -28));
+            Assert.AreEqual(4, gcd(-24, -28));
         }
 
         [TestMethod]
         public void negatives()
         {
             Assert.AreEqual(4, gcd(-24, 28));
-            Assert.AreEqual(-4, gcd(24, -28));
+            Assert.AreEqual(4, gcd(24, -28));
         }
 
         private int gcd(int a, int b)
@@ -51,7 +52,7 @@ namespace ArithmeticTests
                 b = a%b;
                 a = t;
             }
-            return a;
+            return Math.Abs(a);
         }
     }
 }
