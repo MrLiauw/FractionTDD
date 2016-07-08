@@ -40,5 +40,11 @@ namespace Arithmetic.Tests
         {
             Assert.AreEqual(new Fraction(3,5), new Fraction(1, 5).plus(new Fraction(2, 5)));
         }
+
+        [TestMethod()]
+        public void differentDenominator()
+        {
+            Assert.AreEqual(new Fraction(5, 6), new Fraction(1, 2).plus(new Fraction(1, 3)));
+        }
     }
 }

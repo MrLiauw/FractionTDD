@@ -13,7 +13,15 @@
 
         public Fraction plus(Fraction that)
         {
-            return new Fraction(_numerator + that._numerator, _denominator);
+            if (_denominator != that._denominator)
+            {
+                return new Fraction(_numerator * that._denominator + _denominator * that._numerator,
+                    _denominator * that._denominator);
+            }
+            else
+            {
+                return new Fraction(_numerator + that._numerator, _denominator);
+            }
         }
 
         public override string ToString()
