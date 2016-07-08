@@ -44,5 +44,13 @@ namespace ArithmeticTests
             Assert.AreEqual(4, NumberTheory.gcd(-24, 28));
             Assert.AreEqual(4, NumberTheory.gcd(24, -28));
         }
+
+        [TestMethod]
+        public void zero()
+        {
+            Assert.AreEqual(1, NumberTheory.gcd(1, 0));
+            Assert.AreEqual(5, NumberTheory.gcd(0, 5));
+            Assert.AreEqual(0, NumberTheory.gcd(0, 0));
+        }
     }
 }
