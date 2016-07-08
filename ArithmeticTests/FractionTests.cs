@@ -36,7 +36,7 @@ namespace Arithmetic.Tests
         }
 
         [TestMethod()]
-        public void nonTrivialDenominator()
+        public void nonTrivialButCommonDenominator()
         {
             Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
             Assert.AreEqual(3, sum.getNumerator);
