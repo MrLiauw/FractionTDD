@@ -15,15 +15,8 @@
 
         public Fraction plus(Fraction that)
         {
-            if (_denominator != that._denominator)
-            {
-                return new Fraction(_numerator * that._denominator + _denominator * that._numerator,
-                    _denominator * that._denominator);
-            }
-            else
-            {
-                return new Fraction(_numerator + that._numerator, _denominator);
-            }
+            return new Fraction(_numerator * that._denominator + _denominator * that._numerator,
+                _denominator * that._denominator);
         }
 
         public override string ToString()
@@ -35,7 +28,7 @@
         {
             if (other is Fraction)
             {
-                Fraction that = (Fraction) other;
+                Fraction that = (Fraction)other;
                 return _numerator == that._numerator &&
                        _denominator == that._denominator;
             }
@@ -44,7 +37,7 @@
 
         public override int GetHashCode()
         {
-            return _numerator*19 + _denominator;
+            return _numerator * 19 + _denominator;
         }
     }
 }
