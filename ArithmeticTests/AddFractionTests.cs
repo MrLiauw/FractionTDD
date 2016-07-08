@@ -52,5 +52,37 @@ namespace Arithmetic.Tests
         {
             Assert.AreEqual(new Fraction(1), new Fraction(1, 3).plus(new Fraction(2, 3)));
         }
+
+        [TestMethod()]
+        public void oneDenominatorIsAMultipleOfTheOther()
+        {
+            Assert.AreEqual(new Fraction(11,8), new Fraction(3, 4).plus(new Fraction(5, 8)));
+        }
+
+        [TestMethod()]
+        public void commonFactorInDenominators()
+        {
+            Assert.AreEqual(new Fraction(11, 18), new Fraction(1, 6).plus(new Fraction(4, 9)));
+        }
+
+        [TestMethod()]
+        public void reduceResultEvenWhenDenominatorAreTheSame()
+        {
+            Assert.AreEqual(new Fraction(3, 2), new Fraction(3, 4).plus(new Fraction(3, 4)));
+        }
+
+        [TestMethod()]
+        public void negativeFractionAndReducing()
+        {
+            Assert.AreEqual(new Fraction(1, 2), new Fraction(-1, 4).plus(new Fraction(3, 4)));
+            Assert.AreEqual(new Fraction(-1, 8), new Fraction(3, 8).plus(new Fraction(-1, 2)));
+        }
+
+        [TestMethod()]
+        [Ignore]
+        public void negativeEverywhere()
+        {
+            Assert.AreEqual(new Fraction(1,2), new Fraction(1,-4).plus(new Fraction(-3,-4)));
+        }
     }
 }
