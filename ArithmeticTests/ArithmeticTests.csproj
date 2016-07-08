@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="AddFractionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FractionEqualsTest.cs" />
+    <Compile Include="FractionEqualsTests.cs" />
+    <Compile Include="ReduceFractionTests.cs" />
+    <Compile Include="GreatestCommonDiviserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Arithmetic\Arithmetic.csproj">

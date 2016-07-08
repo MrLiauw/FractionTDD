@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ArithmeticTests
 {
     [TestClass]
-    public class FractionEqualsTest
+    public class FractionEqualsTests
     {
         [TestMethod]
         public void sameNumeratorAndSameDenominator()
