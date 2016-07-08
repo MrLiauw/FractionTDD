@@ -42,7 +42,7 @@ namespace Arithmetic.Tests
         }
 
         [TestMethod()]
-        public void differentDenominator()
+        public void differentDenominatorWithoutReducing()
         {
             Assert.AreEqual(new Fraction(5, 6), new Fraction(1, 2).plus(new Fraction(1, 3)));
         }
