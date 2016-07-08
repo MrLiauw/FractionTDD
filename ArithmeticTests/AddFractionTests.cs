@@ -8,39 +8,38 @@ namespace Arithmetic.Tests
         [TestMethod()]
         public void ZeroPlusZero()
         {
-            Assert.AreEqual(0, new Fraction(0).plus(new Fraction(0)).toIntegerValue());
+            Assert.AreEqual(new Fraction(0), new Fraction(0).plus(new Fraction(0)));
         }
 
         [TestMethod()]
         public void nonZeroPlusZero()
         {
-            Assert.AreEqual(3, new Fraction(3).plus(new Fraction(0)).toIntegerValue());
+            Assert.AreEqual(new Fraction(3), new Fraction(3).plus(new Fraction(0)));
         }
 
         [TestMethod()]
         public void ZeroPlusNonZero()
         {
-            Assert.AreEqual(3, new Fraction(0).plus(new Fraction(3)).toIntegerValue());
+            Assert.AreEqual(new Fraction(3), new Fraction(0).plus(new Fraction(3)));
         }
 
         [TestMethod()]
         public void nonNegativeNonZeroOperands()
         {
-            Assert.AreEqual(7, new Fraction(3).plus(new Fraction(4)).toIntegerValue());
+            Assert.AreEqual(new Fraction(7), new Fraction(3).plus(new Fraction(4)));
         }
 
         [TestMethod()]
         public void negativeInputAndNegativeOutput()
         {
-            Assert.AreEqual(-2, new Fraction(-3).plus(new Fraction(1)).toIntegerValue());
+            Assert.AreEqual(new Fraction(-2), new Fraction(-3).plus(new Fraction(1)));
         }
 
         [TestMethod()]
         public void nonTrivialButCommonDenominator()
         {
             Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
-            Assert.AreEqual(3, sum.getNumerator);
-            Assert.AreEqual(5, sum.getDenominator);
+            Assert.AreEqual(new Fraction(3,5), sum);
         }
     }
 }
